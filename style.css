@@ -1,0 +1,287 @@
+/* Fondasi s4: stylesheet bersama profil + landing + mini-app JS.
+   Teknik yang dipakai: border-box, Flexbox (nav, hero), Grid (kartu/fitur),
+   media query untuk layar kecil. */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #e2e8f0;
+  background: #0f172a;
+}
+
+header {
+  background: #1e293b;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.25rem 0 0;
+  color: #94a3b8;
+}
+
+nav {
+  background: #020617;
+  padding: 0.5rem 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section,
+article,
+aside {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  border-bottom: 2px solid #334155;
+  padding-bottom: 0.25rem;
+}
+
+img {
+  border-radius: 8px;
+}
+
+a {
+  color: #7dd3fc;
+}
+
+code {
+  background: #1e293b;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+pre {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Hero landing: Flexbox dua kolom */
+.hero {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero > div {
+  flex: 1;
+}
+
+.hero pre {
+  flex: 1;
+}
+
+.btn {
+  display: inline-block;
+  background: #0ea5e9;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #0ea5e9;
+  color: #7dd3fc;
+}
+
+/* Kartu project + fitur: Grid tiga kolom */
+.cards,
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.cards article,
+.features-grid article {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.cards h3,
+.features-grid h3 {
+  margin-top: 0;
+}
+
+/* Form */
+form p {
+  margin: 0 0 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  background: #020617;
+  color: #e2e8f0;
+  font: inherit;
+}
+
+button {
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+
+footer {
+  text-align: center;
+  color: #94a3b8;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid #334155;
+}
+
+/* Kalkulator + to-do + mini-app */
+.layar {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 0.75rem;
+  min-height: 3rem;
+}
+
+.tombol-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.tombol-grid button {
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+}
+
+.filter-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-row button {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.filter-row button.aktif {
+  background: #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.daftar {
+  list-style: none;
+  padding: 0;
+}
+
+.daftar li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.daftar li .teks {
+  flex: 1;
+}
+
+.daftar li.selesai .teks {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.daftar li button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+/* Responsif: layar kecil — nav menumpuk, hero menumpuk, grid 1 kolom */
+@media (max-width: 640px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .cards,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}

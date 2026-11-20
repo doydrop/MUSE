@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catatan Pengeluaran — Mini-app Vanilla JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Catatan Pengeluaran</h1>
+      <p>Mini-app vanilla JS: form, filter, total, localStorage (Fondasi s5-project)</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="landing.html">Project MUSE</a></li>
+        <li><a href="kalkulator.html">Kalkulator</a></li>
+        <li><a href="todo.html">To-do</a></li>
+        <li><a href="mini-app.html">Catatan Pengeluaran</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Tambah pengeluaran</h2>
+        <form id="form-pengeluaran">
+          <p>
+            <label for="nama">Nama:</label>
+            <input type="text" name="nama" id="nama" placeholder="cth: Kopi" required />
+          </p>
+          <p>
+            <label for="jumlah">Jumlah (Rp):</label>
+            <input type="number" name="jumlah" id="jumlah" min="1" step="1" placeholder="cth: 15000" required />
+          </p>
+          <p>
+            <label for="kategori">Kategori:</label>
+            <select name="kategori" id="kategori">
+              <option value="Makan">Makan</option>
+              <option value="Transport">Transport</option>
+              <option value="Hiburan">Hiburan</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </p>
+          <p>
+            <button type="submit">Tambah</button>
+          </p>
+        </form>
+        <p id="pesan-error" role="alert"></p>
+      </section>
+
+      <section>
+        <h2>Daftar</h2>
+        <p>
+          <label for="filter-kategori">Filter kategori:</label>
+          <select name="filter-kategori" id="filter-kategori">
+            <option value="semua">Semua</option>
+            <option value="Makan">Makan</option>
+            <option value="Transport">Transport</option>
+            <option value="Hiburan">Hiburan</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </p>
+        <ul class="daftar" id="daftar-pengeluaran"></ul>
+        <p id="total"></p>
+        <div id="per-kategori"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 POCONG — dibuat dari file kosong.</p>
+    </footer>
+
+    <script src="mini-app.js"></script>
+  </body>
+</html>

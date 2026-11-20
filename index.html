@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>POCONG — Profil</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>POCONG</h1>
+      <p>Desainer · Kreator crypto/Web3 &amp; AI agent</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="landing.html">Project MUSE</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article id="tentang">
+        <h2>Tentang</h2>
+        <img
+          src="https://avatars.githubusercontent.com/u/195925403?v=4"
+          alt="Foto profil POCONG dari GitHub"
+          width="120"
+          height="120"
+        />
+        <p>
+          Halo, saya Iwan Kurniawan — dipanggil POCONG. Saya desainer dan
+          kreator di crypto, Web3, dan AI agent. Saat ini saya belajar coding
+          dari nol lewat Space Coder: Python dulu, lalu Git, HTML/CSS, dan
+          JavaScript.
+        </p>
+        <p>
+          Halaman ini saya bangun dari file kosong sebagai latihan HTML
+          semantik: header, nav, main, article, section, aside, footer —
+          tanpa satu pun <code>&lt;div&gt;</code> untuk struktur utama.
+        </p>
+      </article>
+
+      <section id="project">
+        <h2>Project</h2>
+        <div class="cards">
+          <article>
+            <h3>MUSE — Tebak Angka + Kalkulator CLI</h3>
+            <p>
+              Repo GitHub pertama saya yang rapi: game tebak angka 1–20 dan
+              kalkulator baris perintah, 4 commit yang bisa dibaca.
+            </p>
+            <p><a href="https://github.com/doydrop/MUSE">github.com/doydrop/MUSE</a></p>
+          </article>
+          <article>
+            <h3>Research-to-Treasury Agent</h3>
+            <p>
+              Agent yang menjual riset saham seharga $0,05 USDC via x402 lalu
+              menyapu profitnya ke saham tokenized di Base Sepolia. Ikut
+              kompetisi Stocks Maxxing.
+            </p>
+            <p><a href="https://github.com/doydrop/research-to-treasury-agent">github.com/doydrop/research-to-treasury-agent</a></p>
+          </article>
+          <article>
+            <h3>Space Coder</h3>
+            <p>
+              Ruang belajar coding 8 pelajaran per hari: Fondasi, CS,
+              Frontend, Backend, Blockchain/Solana, AI Agents, dan lainnya.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <aside>
+        <h2>Fakta singkat</h2>
+        <ul>
+          <li>X: @DoyDrop</li>
+          <li>Instagram: @doydrop</li>
+          <li>GitHub: doydrop</li>
+          <li>Gold winner — Kite Creator Spotlight</li>
+        </ul>
+      </aside>
+
+      <section id="kontak">
+        <h2>Kontak</h2>
+        <form action="#" method="get">
+          <p>
+            <label for="nama">Nama (wajib):</label>
+            <input type="text" name="nama" id="nama" required />
+          </p>
+          <p>
+            <label for="email">Email (wajib):</label>
+            <input type="email" name="email" id="email" required />
+          </p>
+          <p>
+            <label for="topik">Topik:</label>
+            <select name="topik" id="topik">
+              <option value="kerja-sama">Kerja sama</option>
+              <option value="tanya-coding">Tanya soal coding</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </p>
+          <p>
+            <label for="pesan">Pesan:</label>
+            <textarea name="pesan" id="pesan" rows="4"></textarea>
+          </p>
+          <p>
+            <button type="submit">Kirim</button>
+          </p>
+        </form>
+        <p><small>Form demo — belum terhubung ke server.</small></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 POCONG — dibuat dari file kosong.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MUSE — Tebak Angka + Kalkulator CLI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MUSE</h1>
+      <p>Tebak Angka + Kalkulator CLI</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="landing.html">Project MUSE</a></li>
+        <li><a href="#cara">Cara jalanin</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h2>Dua program Python kecil, dari file kosong.</h2>
+          <p>
+            Game tebak angka 1–20 dan kalkulator baris perintah. Dibangun
+            sebagai latihan Fondasi Tahap 2, dirapikan jadi repo GitHub
+            pertama yang riwayat commit-nya bisa dibaca orang lain.
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/doydrop/MUSE">Lihat di GitHub</a>
+            <a class="btn btn-ghost" href="index.html">Tentang pembuatnya</a>
+          </p>
+        </div>
+        <pre><code>$ python3 tebak_angka.py
+Tebak angka 1-20 (ketik 'q' untuk keluar).
+Tebakanmu: 10
+Terlalu kecil.
+
+$ python3 kalkulator.py
+&gt; 5 + 3
+= 8.0</code></pre>
+      </section>
+
+      <section>
+        <h2>Isinya</h2>
+        <div class="features-grid">
+          <article>
+            <h3>Game tebak angka</h3>
+            <p>
+              Komputer menyimpan satu angka rahasia 1–20. Setiap tebakan
+              dibalas petunjuk "terlalu kecil" atau "terlalu besar".
+              Ketik <code>q</code> untuk keluar.
+            </p>
+          </article>
+          <article>
+            <h3>Kalkulator CLI</h3>
+            <p>
+              Ketik <code>5 + 3</code> lalu Enter. Operator
+              <code>+ - * /</code>. Bagi nol dan operator asing ditangani
+              tanpa crash.
+            </p>
+          </article>
+          <article>
+            <h3>Repo yang rapi</h3>
+            <p>
+              4 commit, satu perubahan satu commit: chore, dua feat, satu
+              docs. README menjelaskan cara jalanin dan struktur project.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cara">
+        <h2>Cara jalanin</h2>
+        <ol>
+          <li>Butuh Python 3 saja, tanpa library tambahan.</li>
+          <li>Clone repo: <code>git clone https://github.com/doydrop/MUSE.git</code></li>
+          <li>Jalankan: <code>python3 tebak_angka.py</code> atau <code>python3 kalkulator.py</code></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Coba sendiri</h2>
+        <p>
+          Repo ini publik dan gratis. Kalau mau belajar dari file kosong
+          seperti saya, mulai dari Fondasi: satu bahasa, satu repo, satu
+          commit kecil setiap kali.
+        </p>
+        <p><a class="btn" href="https://github.com/doydrop/MUSE">Buka repo MUSE</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 POCONG — dibuat dari file kosong.</p>
+    </footer>
+  </body>
+</html>

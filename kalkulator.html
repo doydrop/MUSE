@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kalkulator — Vanilla JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kalkulator</h1>
+      <p>Vanilla JS, dari file kosong (Fondasi s5-l3)</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="landing.html">Project MUSE</a></li>
+        <li><a href="kalkulator.html">Kalkulator</a></li>
+        <li><a href="todo.html">To-do</a></li>
+        <li><a href="mini-app.html">Catatan Pengeluaran</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Kalkulator</h2>
+        <div class="layar" id="layar" aria-live="polite">0</div>
+        <div class="tombol-grid">
+          <button type="button" data-digit="7">7</button>
+          <button type="button" data-digit="8">8</button>
+          <button type="button" data-digit="9">9</button>
+          <button type="button" data-op="/">÷</button>
+          <button type="button" data-digit="4">4</button>
+          <button type="button" data-digit="5">5</button>
+          <button type="button" data-digit="6">6</button>
+          <button type="button" data-op="*">×</button>
+          <button type="button" data-digit="1">1</button>
+          <button type="button" data-digit="2">2</button>
+          <button type="button" data-digit="3">3</button>
+          <button type="button" data-op="-">−</button>
+          <button type="button" data-digit="0">0</button>
+          <button type="button" data-digit=".">.</button>
+          <button type="button" id="btn-hapus">⌫</button>
+          <button type="button" data-op="+">+</button>
+          <button type="button" id="btn-bersih">C</button>
+          <button type="button" id="btn-sama">=</button>
+        </div>
+        <p><small>Bisa juga lewat keyboard: angka, + − * /, Enter (=), Esc (C), Backspace (⌫).</small></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 POCONG — dibuat dari file kosong.</p>
+    </footer>
+
+    <script src="kalkulator.js"></script>
+  </body>
+</html>

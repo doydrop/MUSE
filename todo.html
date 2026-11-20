@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-do — Vanilla JS + localStorage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>To-do List</h1>
+      <p>Vanilla JS + localStorage + filter (Fondasi s5-l4)</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Profil</a></li>
+        <li><a href="landing.html">Project MUSE</a></li>
+        <li><a href="kalkulator.html">Kalkulator</a></li>
+        <li><a href="todo.html">To-do</a></li>
+        <li><a href="mini-app.html">Catatan Pengeluaran</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>To-do</h2>
+        <form id="form-todo">
+          <p>
+            <label for="input-todo">Tugas baru:</label>
+            <input type="text" name="tugas" id="input-todo" placeholder="Tulis tugas, lalu Enter" />
+          </p>
+          <p>
+            <button type="submit">Tambah</button>
+          </p>
+        </form>
+        <div class="filter-row" role="group" aria-label="Filter tugas">
+          <button type="button" data-filter="semua" class="aktif">Semua</button>
+          <button type="button" data-filter="aktif">Aktif</button>
+          <button type="button" data-filter="selesai">Selesai</button>
+        </div>
+        <ul class="daftar" id="daftar"></ul>
+        <p id="sisa"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 POCONG — dibuat dari file kosong.</p>
+    </footer>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
